@@ -125,7 +125,6 @@ nav ul li a {
     width: 250px;
     height: 350px;
     perspective: 1000px;
-    margin: 10px;
     position: relative;
 }
 
@@ -136,8 +135,6 @@ nav ul li a {
     transform-style: preserve-3d;
     transition: transform 1.2s ease-in-out; /* Slower and smoother flip */
     position: relative;
-    left: 0;
-    top: 0;
 }
 
 /* When the card is flipped */
@@ -163,7 +160,7 @@ nav ul li a {
 /* 🎨 Polaroid Style Front */
 .card-front  {
     padding: 10px;
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to Pink ombre */
+    background: linear-gradient(135deg, #E6CCFF, #FFD9EC); /* Purple to Pink ombre */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
