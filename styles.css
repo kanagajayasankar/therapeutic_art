@@ -170,6 +170,9 @@ body {
     perspective: 1200px; /* Perspective for 3D effect */
     position: relative;
     margin: 10px; /* Adds space between cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 🎴 Flip Animation */
