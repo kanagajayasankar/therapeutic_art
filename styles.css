@@ -95,6 +95,19 @@ nav ul li a {
     transform: translateY(0); /* Slide up smoothly */
 }
 
+.activities-container {
+    background-image: url('images/cards_background.jpg'); /* Change to your actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full screen section */
+}
+
 
 /* Activity Cards */
 .card-container {
