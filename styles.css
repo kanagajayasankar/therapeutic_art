@@ -1,13 +1,13 @@
-/* General Styles */
+/* 🎨 General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     text-align: center;
 }
 
-/* Header */
+/* 🏠 Header */
 header {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
@@ -34,7 +34,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Background Video */
+/* 🎥 Background Video */
 #home {
     position: relative;
     height: 100vh;
@@ -56,10 +56,10 @@ nav ul li a {
     text-align: center;
 }
 
-/* 🎥 Smooth fade effect between video and activities section */
+/* 🎥 Smooth Fade Effect Between Video & Activities */
 .video-container {
     position: relative;
-    height: 100vh; /* Full screen height */
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -68,15 +68,15 @@ nav ul li a {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 150px; /* Adjust fade height */
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)); /* Smooth fade effect */
+    height: 200px; /* Adjust fade height */
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(245, 245, 245, 1)); /* Smoother fade */
 }
 
 /* 🎨 Flip Card Section (Initially Hidden) */
 .activities-container {
     background-image: url('images/cards_background.jpg'); /* Background for flip card section */
     background-size: cover;
-    background-position: center top -40px;
+    background-position: center -50px; /* Moves background image higher */
     background-repeat: no-repeat;
     
     padding: 50px 20px;
@@ -90,11 +90,11 @@ nav ul li a {
     transform: translateY(50px); /* Start slightly below */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth fade-in effect */
     
-    margin-top: 10vh; /* Pushes the cards below the full-screen video */
+    margin-top: 10vh; /* Adjust as needed */
     position: relative;
 }
 
-/* Optional: If background is too dark/light, add a semi-transparent overlay */
+/* 🎨 Optional Overlay for Better Readability */
 .activities-container::before {
     content: "";
     position: absolute;
@@ -106,32 +106,18 @@ nav ul li a {
     z-index: 0;
 }
 
-
-/* 🎨 Flip Card Section (Visible when scrolled) */
+/* 🎨 Show Flip Cards When Scrolled */
 .activities-container.show {
     opacity: 1;
-    transform: translateY(0); /* Slide up smoothly */
+    transform: translateY(0);
 }
 
-.activities-container {
-    background-image: url('images/cards_background.jpg'); /* Change to your actual image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 50px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Full screen section */
-}
-
-
-/* Activity Cards */
+/* 🎴 Flip Card Styles */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
@@ -140,70 +126,17 @@ nav ul li a {
     height: 350px;
     perspective: 1000px;
     margin: 10px;
+    position: relative;
 }
 
-.card-front, .card-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: transform 0.6s;
-}
-
-.card-inner {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-front img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; 
-}
-
-.card-back {
-    background: #ffccbc;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.activity-card:hover .card-front {
-    transform: rotateY(180deg);
-}
-
-.activity-card:hover .card-back {
-    transform: rotateY(0);
-}
-/* Container for all activity cards */
-.activities-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Each activity card */
-.activity-card {
-    width: 250px;
-    height: 350px;
-    perspective: 1000px; /* Enables the 3D effect */
-}
-
-//* 🎴 Flip Animation - Slow Down */
+/* 🎴 Flip Animation - Slower & Smoother */
 .card-inner {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 1.2s ease-in-out; /* Slower and smoother transition */
+    transition: transform 1.2s ease-in-out; /* Slower and smoother flip */
+    position: relative;
 }
-
 
 /* When the card is flipped */
 .activity-card.flipped .card-inner {
@@ -218,7 +151,6 @@ nav ul li a {
     backface-visibility: hidden;
     border-radius: 8px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-    background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -226,9 +158,15 @@ nav ul li a {
     text-align: center;
 }
 
-/* Front of the card (Polaroid style) */
+/* 🎨 Polaroid Style Front */
 .card-front {
     padding: 10px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card-front img {
@@ -238,15 +176,26 @@ nav ul li a {
     border-radius: 5px;
 }
 
-/* Activity name at the bottom of Polaroid frame */
+/* 🖋 Activity Name on the Front (Polaroid Caption) */
 .card-front .caption {
-    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
     font-weight: bold;
-    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to Pink */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black;
+    border-radius: 0 0 10px 10px; /* Smooth bottom corners */
 }
 
-/* Back of the card */
+/* 🎨 Back of the Card */
 .card-back {
+    background: #ffccbc;
     transform: rotateY(180deg);
     padding: 15px;
 }
@@ -255,49 +204,33 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-.card-front p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; /* Ensures text fits */
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to Pink */
-    color: white;
-    margin: 0;
-    border-top: 2px solid black;
-}
-
-
-
-
+/* 📜 Card Back Description */
 .card-back p {
     font-size: 14px;
     margin: 5px 0;
 }
 
-/* Smooth Scrolling */
+/* 🎯 Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Menu Button */
+/* 🍽️ Menu Button */
 #menu-button {
     background: #ff7043;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 #menu-content {
     display: none;
 }
 
-/* Footer */
+/* 📌 Footer */
 footer {
     background: black;
     color: white;
