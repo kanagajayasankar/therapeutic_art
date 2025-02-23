@@ -72,7 +72,7 @@ nav ul li a {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(245, 245, 245, 1)); /* Smoother fade */
 }
 
-/* 🎨 Flip Card Section (Initially Hidden) */
+/* 🎨 Flip Card Section */
 .activities-container {
     background-image: url('images/cards_background.jpg'); /* Background for flip card section */
     background-size: cover;
@@ -117,7 +117,7 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Adds space between cards */
     padding: 20px;
 }
 
@@ -126,6 +126,7 @@ nav ul li a {
     height: 350px;
     perspective: 1000px;
     position: relative;
+    margin: 15px; /* Adds space around each card */
 }
 
 /* 🎴 Flip Animation - Slower & Smoother */
@@ -147,6 +148,8 @@ nav ul li a {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0; /* Ensures no shifting */
+    left: 0; /* Ensures no shifting */
     backface-visibility: hidden;
     border-radius: 8px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
@@ -158,9 +161,9 @@ nav ul li a {
 }
 
 /* 🎨 Polaroid Style Front */
-.card-front  {
+.card-front {
     padding: 10px;
-    background: linear-gradient(135deg, #E6CCFF, #FFD9EC); /* Purple to Pink ombre */
+    background: linear-gradient(135deg, #F2E6FF, #FFE6F2); /* Lighter Purple to Pink Ombre */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -170,14 +173,15 @@ nav ul li a {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* 🖼 Increased Image Size (Reduces space below image) */
 .card-front img {
     width: 100%;
-    height: 200px;
+    height: 230px; /* Increased height to reduce gap */
     object-fit: cover;
     border-radius: 5px;
 }
 
-/* 🖋 Activity Name on the Front (Polaroid Caption) */
+/* 🖋 Activity Name on the Front */
 .card-front .caption {
     height: 50px;
     width: 100%;
@@ -201,6 +205,7 @@ nav ul li a {
     padding: 15px;
 }
 
+/* Fix the Back Text Alignment */
 .card-back h3 {
     margin-bottom: 10px;
 }
