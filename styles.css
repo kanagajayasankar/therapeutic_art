@@ -178,14 +178,14 @@ nav ul li a {
     perspective: 1000px; /* Enables the 3D effect */
 }
 
-/* Inner part of the card that flips */
+//* 🎴 Flip Animation - Slow Down */
 .card-inner {
     width: 100%;
     height: 100%;
-    position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    transition: transform 1.2s ease-in-out; /* Slower and smoother transition */
 }
+
 
 /* When the card is flipped */
 .activity-card.flipped .card-inner {
@@ -236,6 +236,24 @@ nav ul li a {
 .card-back h3 {
     margin-bottom: 10px;
 }
+
+/* 🎨 Polaroid Text Styling */
+.card-front p {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 50px; /* Adjust this to fit the white space */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Change this to any aesthetic font */
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to Pink */
+    color: white; /* Ensures text is readable */
+    margin: 0;
+    border-top: 2px solid black;
+}
+
+
 
 .card-back p {
     font-size: 14px;
