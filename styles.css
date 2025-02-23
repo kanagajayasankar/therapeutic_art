@@ -76,7 +76,7 @@ nav ul li a {
 .activities-container {
     background-image: url('images/cards_background.jpg'); /* Background for flip card section */
     background-size: cover;
-    background-position: center;
+    background-position: center top -15x;
     background-repeat: no-repeat;
     
     padding: 50px 20px;
