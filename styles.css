@@ -78,16 +78,34 @@ nav ul li a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
     padding: 50px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
     min-height: 100vh; /* Full screen section */
     opacity: 0; /* Initially hidden */
     transform: translateY(50px); /* Start slightly below */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth fade-in effect */
+    
+    margin-top: 100vh; /* Pushes the cards below the full-screen video */
+    position: relative;
 }
+
+/* Optional: If background is too dark/light, add a semi-transparent overlay */
+.activities-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Adjust transparency if needed */
+    z-index: 0;
+}
+
 
 /* 🎨 Flip Card Section (Visible when scrolled) */
 .activities-container.show {
@@ -237,21 +255,22 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-/* 🎨 Polaroid Text Styling */
 .card-front p {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 50px; /* Adjust this to fit the white space */
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Ensures text fits */
+    width: 100%;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif; /* Change this to any aesthetic font */
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to Pink */
-    color: white; /* Ensures text is readable */
+    color: white;
     margin: 0;
     border-top: 2px solid black;
 }
+
 
 
 
