@@ -23,3 +23,20 @@ cards.forEach(card => {
         card.classList.toggle("flipped");
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const activitySection = document.querySelector(".activities-container");
+
+    function showActivitiesOnScroll() {
+        const scrollY = window.scrollY;
+        const sectionTop = activitySection.offsetTop;
+        const windowHeight = window.innerHeight;
+
+        if (scrollY + windowHeight > sectionTop + 100) {
+            activitySection.classList.add("show");
+        }
+    }
+
+    window.addEventListener("scroll", showActivitiesOnScroll);
+});
+
