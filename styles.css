@@ -2,35 +2,44 @@
 header {
     background-color: rgba(0, 0, 0, 0.9); /* Dark background */
     color: white;
-    padding: 15px 0;
+    padding: 15px 40px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Home on left, others on right */
     align-items: center;
 }
 
 /* 📌 Navigation Menu */
 nav {
-    width: 100%;
-    max-width: 1100px; /* Keeps menu centered */
     display: flex;
-    justify-content: center;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* 🔗 Navigation List */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Align "Home" separately */
+.nav-left {
+    margin-left: 0;
+}
+
+.nav-right {
+    margin-left: auto;
 }
 
 /* 🔗 Navigation Links */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 40px; /* Adds space between menu items */
-}
-
 nav ul li {
     display: inline;
 }
@@ -38,7 +47,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px 15px;
@@ -47,14 +56,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #FF69B4; /* Stylish pink hover effect */
-    transform: scale(1.1); /* Slight hover zoom */
+    color: #FF69B4;
+    transform: scale(1.1);
 }
 
-/* 📱 Responsive Navigation (For Mobile Screens) */
+/* 📱 Responsive Navigation */
 @media screen and (max-width: 768px) {
     header {
-        padding: 10px 0;
+        padding: 10px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul {
@@ -64,10 +78,11 @@ nav ul li a:hover {
     }
     
     nav ul li a {
-        font-size: 18px;
+        font-size: 16px;
         padding: 8px;
     }
 }
+
 /* 🎨 General Styles */
 body {
     font-family: 'Poppins', sans-serif;
@@ -77,16 +92,16 @@ body {
     text-align: center;
 }
 
-
 /* 🖌️ "Choose Your Art Experience" - Stylish Heading */
 #choose-art-title {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(45deg, #7D3C98, #E91E63); /* Purple to Pink Gradient */
+    background: linear-gradient(45deg, #7D3C98, #E91E63);
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 /* 🎥 Background Video */
@@ -113,7 +128,7 @@ body {
 
 /* 🎨 Flip Card Section */
 .activities-container {
-    background-image: url('images/cards_background.jpg'); /* Background for flip card section */
+    background-image: url('images/cards_background.jpg');
     background-size: cover;
     background-position: center -50px;
     background-repeat: no-repeat;
@@ -144,17 +159,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Adds space between cards */
+    gap: 25px; /* Adds space between cards */
     padding: 20px;
 }
 
 /* 🃏 Smaller Card Size - Fits in 2 Rows */
 .activity-card {
-    width: 200px; /* Smaller width */
-    height: 300px; /* Smaller height */
-    perspective: 1000px;
+    width: 200px;
+    height: 300px;
+    perspective: 1200px; /* Perspective for 3D effect */
     position: relative;
-    margin: 15px; /* Adds space between cards */
+    margin: 10px; /* Adds space between cards */
 }
 
 /* 🎴 Flip Animation */
@@ -164,6 +179,7 @@ body {
     transform-style: preserve-3d;
     transition: transform 1s ease-in-out;
     position: relative;
+    transform-origin: center; /* Ensures flipping happens in place */
 }
 
 /* When the card is flipped */
@@ -204,10 +220,10 @@ body {
 /* 🖼 Fix Slow Loading Image */
 .card-front img {
     width: 100%;
-    height: 200px; /* Smaller height for new card size */
+    height: 180px; /* Adjusted for better fit */
     object-fit: cover;
     border-radius: 5px;
-    loading: lazy; /* Makes image load only when needed */
+    loading: lazy; /* Faster loading */
 }
 
 /* 🖋 Activity Name on the Front */
@@ -215,7 +231,7 @@ body {
     height: 40px;
     width: 100%;
     text-align: center;
-    font-size: 16px; /* Smaller font size */
+    font-size: 16px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -237,12 +253,12 @@ body {
 /* Fix the Back Text Alignment */
 .card-back h3 {
     margin-bottom: 5px;
-    font-size: 16px; /* Adjust font size */
+    font-size: 16px;
 }
 
 /* 📜 Card Back Description */
 .card-back p {
-    font-size: 12px; /* Smaller text for new card size */
+    font-size: 12px;
     margin: 5px 0;
 }
 
