@@ -90,7 +90,7 @@ nav ul li a {
     transform: translateY(50px); /* Start slightly below */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth fade-in effect */
     
-    margin-top: 60vh; /* Pushes the cards below the full-screen video */
+    margin-top: 10vh; /* Pushes the cards below the full-screen video */
     position: relative;
 }
 
