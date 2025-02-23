@@ -90,7 +90,7 @@ nav ul li a {
     transform: translateY(50px); /* Start slightly below */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth fade-in effect */
     
-    margin-top: 10vh; /* Adjust as needed */
+    margin-top: 5vh; /* Adjust as needed */
     position: relative;
 }
 
@@ -136,6 +136,8 @@ nav ul li a {
     transform-style: preserve-3d;
     transition: transform 1.2s ease-in-out; /* Slower and smoother flip */
     position: relative;
+    left: 0;
+    top: 0;
 }
 
 /* When the card is flipped */
@@ -159,14 +161,16 @@ nav ul li a {
 }
 
 /* 🎨 Polaroid Style Front */
-.card-front {
+.card-front  {
     padding: 10px;
-    background: white;
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to Pink ombre */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-front img {
@@ -184,12 +188,12 @@ nav ul li a {
     font-size: 18px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to Pink */
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 2px solid black;
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 0 0 10px 10px; /* Smooth bottom corners */
 }
 
