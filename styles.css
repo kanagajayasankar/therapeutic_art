@@ -97,7 +97,7 @@ nav ul li a {
 
 
 /* Activity Cards */
-.activities-container {
+.card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -119,7 +119,7 @@ nav ul li a {
     transition: transform 0.6s;
 }
 
-.card-front {
+.card-inner {
     background: white;
     display: flex;
     flex-direction: column;
@@ -130,6 +130,7 @@ nav ul li a {
 .card-front img {
     width: 100%;
     height: auto;
+    object-fit: cover; 
 }
 
 .card-back {
