@@ -5,109 +5,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Therapeutic Art Space</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Therapeutic Art Space</h1>
-        <nav>
-            <ul>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="video-background">
-        <video autoplay muted loop id="bg-video">
-            <source src="videos/background.mp4" type="video/mp4">
-        </video>
-        <div class="overlay-text">A Creative and Relaxing Experience</div>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Background Video Section -->
+<section id="home">
+    <video autoplay muted loop id="background-video">
+        <source src="videos/background_video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <h1>Welcome to the Art Experience Space</h1>
+        <p>Unleash your creativity in a serene environment.</p>
     </div>
-    
-    <section id="activities">
-        <h2>Choose Your Activity</h2>
-        <div class="activity-grid">
-            <div class="activity-card" id="van-gogh-painting">
-                <div class="card-front">
-                    <img src="images/van-gogh.jpg" alt="Van Gogh Painting">
-                </div>
-                <div class="card-back">
-                    <p>Experience painting in Van Gogh’s style! Take home your own canvas masterpiece.</p>
-                </div>
+</section>
+
+<!-- Activities Section -->
+<section id="activities">
+    <h2>Our Activities</h2>
+    <div class="activities-container">
+        <!-- Add all 10 activities here with flipping card effect -->
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/van_gogh_painting.jpg" alt="Van Gogh Painting">
+                <h3>Van Gogh Painting</h3>
             </div>
-            <div class="activity-card" id="ceramic-painting">
-                <div class="card-front">
-                    <img src="images/ceramic-painting.jpg" alt="Ceramic Painting">
-                </div>
-                <div class="card-back">
-                    <p>Paint unique ceramic pieces with vibrant colors and take them home!</p>
-                </div>
-            </div>
-            <div class="activity-card" id="glass-painting">
-                <div class="card-front">
-                    <img src="images/glass-painting.jpg" alt="Glass Painting">
-                </div>
-                <div class="card-back">
-                    <p>Paint on glass and create beautiful stained-glass effects!</p>
-                </div>
+            <div class="card-back">
+                <h3>Van Gogh Painting</h3>
+                <p>Recreate Van Gogh's masterpieces on canvas.</p>
+                <p><strong>Take Home:</strong> Your painted canvas.</p>
+                <p><strong>Price:</strong> ₹1500</p>
             </div>
         </div>
-    </section>
-    
-    <section id="menu">
-        <h2>Enjoy Complimentary Beverages & Snacks</h2>
-        <button id="menu-btn">View Menu</button>
-        <div id="menu" class="hidden">
-            <div class="menu-grid">
-                <div>
-                    <h3>Beverages (Choose One)</h3>
-                    <ul>
-                        <li>Butter Milk</li>
-                        <li>Hot Tea</li>
-                        <li>Green Tea</li>
-                        <li>Cold Coffee</li>
-                        <li>Hot Chocolate</li>
-                        <li>Badam Milk (Hot/Cold)</li>
-                        <li>Lemonade</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Snacks (Choose One)</h3>
-                    <ul>
-                        <li>Chocolate Sandwich</li>
-                        <li>Peanut Butter Sandwich</li>
-                        <li>Fruit Salad</li>
-                        <li>Popcorn</li>
-                        <li>Corn Chips</li>
-                        <li>Potato Chips</li>
-                    </ul>
-                </div>
+
+       
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/mosaic_art.jpg" alt="Mosaic Art">
+                <h3>Mosaic Art</h3>
+            </div>
+            <div class="card-back">
+                <h3>Mosaic Art</h3>
+                <p>Arrange colorful pieces to create stunning mosaic designs.</p>
+                <p><strong>Take Home:</strong> Your mosaic masterpiece.</p>
+                <p><strong>Price:</strong> ₹1600</p>
             </div>
         </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:jayasankarkanaga@gmail.com">jayasankarkanaga@gmail.com</a></p>
-        <p>Follow us on Instagram: <a href="https://www.instagram.com/light_beyond_shadows/" target="_blank">light_beyond_shadows</a></p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            <label for="request">Your Request:</label>
-            <textarea id="request" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Therapeutic Art Space. All rights reserved.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/charm_bracelet.jpg" alt="Charm Bracelet Making">
+                <h3>Charm Bracelet Making</h3>
+            </div>
+            <div class="card-back">
+                <h3>Charm Bracelet Making</h3>
+                <p>Design and create a unique charm bracelet.</p>
+                <p><strong>Take Home:</strong> Your custom-made bracelet.</p>
+                <p><strong>Price:</strong> ₹1000</p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/name_bracelet.jpg" alt="Name Bracelet Making">
+                <h3>Name Bracelet Making</h3>
+            </div>
+            <div class="card-back">
+                <h3>Name Bracelet Making</h3>
+                <p>Create a personalized name bracelet with beads and charms.</p>
+                <p><strong>Take Home:</strong> Your custom name bracelet.</p>
+                <p><strong>Price:</strong> ₹1100</p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/hand_pressed_pottery.jpg" alt="Hand Pressed Pottery">
+                <h3>Hand Pressed Pottery</h3>
+            </div>
+            <div class="card-back">
+                <h3>Hand Pressed Pottery</h3>
+                <p>Mold and press clay into unique pottery pieces.</p>
+                <p><strong>Take Home:</strong> Your handmade pottery.</p>
+                <p><strong>Price:</strong> ₹1800</p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/glow_painting.jpg" alt="Glow in the Dark Painting">
+                <h3>Glow in the Dark Painting</h3>
+            </div>
+            <div class="card-back">
+                <h3>Glow in the Dark Painting</h3>
+                <p>Use special paints to create art that glows in darkness.</p>
+                <p><strong>Take Home:</strong> Your glowing artwork.</p>
+                <p><strong>Price:</strong> ₹1400</p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/tote_bag_painting.jpg" alt="Tote Bag Painting">
+                <h3>Tote Bag Painting</h3>
+            </div>
+            <div class="card-back">
+                <h3>Tote Bag Painting</h3>
+                <p>Design and paint your own custom tote bag.</p>
+                <p><strong>Take Home:</strong> Your painted tote bag.</p>
+                <p><strong>Price:</strong> ₹1200</p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/paint_by_numbers.jpg" alt="Paint by Numbers">
+                <h3>Paint by Numbers</h3>
+            </div>
+            <div class="card-back">
+                <h3>Paint by Numbers</h3>
+                <p>Follow a numbered guide to create a stunning painting.</p>
+                <p><strong>Take Home:</strong> Your completed artwork.</p>
+                <p><strong>Price:</strong> ₹1300</p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/ceramic_painting.jpg" alt="Ceramic Painting">
+                <h3>Ceramic Painting</h3>
+            </div>
+            <div class="card-back">
+                <h3>Ceramic Painting</h3>
+                <p>Paint and decorate ceramic pieces with vibrant colors.</p>
+                <p><strong>Take Home:</strong> Your painted ceramic piece.</p>
+                <p><strong>Price:</strong> ₹1250</p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="card-front">
+                <img src="images/glass_painting.jpg" alt="Glass Painting">
+                <h3>Glass Painting</h3>
+            </div>
+            <div class="card-back">
+                <h3>Glass Painting</h3>
+                <p>Use special colors to paint on glass surfaces.</p>
+                <p><strong>Take Home:</strong> Your glass artwork.</p>
+                <p><strong>Price:</strong> ₹1350</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu">
+    <button id="menu-button">Enjoy Complimentary Beverage & Snacks</button>
+    <div id="menu-content">
+        <h3>Beverages (Choose One)</h3>
+        <p>Buttermilk, Hot Tea, Green Tea, Coffee, Lemonade</p>
+        <h3>Snacks (Choose One)</h3>
+        <p>Chocolate Sandwich, Popcorn, Chips, Fruit Salad</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Art Experience Space. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
