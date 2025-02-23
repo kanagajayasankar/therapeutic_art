@@ -1,17 +1,20 @@
-// Smooth Scrolling Effect
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("menu-btn").addEventListener("click", function() {
+        document.getElementById("menu").classList.toggle("hidden");
+    });
+    
+    document.querySelectorAll(".activity-card").forEach(card => {
+        card.addEventListener("click", function() {
+            card.classList.toggle("flipped");
+        });
+    });
+    
+    document.querySelectorAll("nav a").forEach(anchor => {
+        anchor.addEventListener("click", function(event) {
+            event.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
         });
     });
 });
-
-// Form Validation
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    let name = document.querySelector('input[placeholder="Your Name"]').value.trim();
-    let phone = document.querySelector('input[placeholder="Phone Number"]').value.trim();
-    let email = document.querySelector('i
